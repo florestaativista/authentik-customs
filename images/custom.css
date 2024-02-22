@@ -3,7 +3,12 @@
     
   }
   
-  .pf-c-login__main::before {
+  .pf-c-page__drawer .pf-c-drawer__content .pf-c-login .ak-login-container .pf-c-login__main {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .pf-c-page__drawer .pf-c-drawer__content .pf-c-login .ak-login-container .pf-c-login__main::before {
     background-image: url('../images/image-left.png');
   }
 
@@ -11,7 +16,8 @@
     --pf-c-background-image--Filter: none;
   }
 
-  .pc-c-login__header {
+  .pf-c-page__drawer .pf-c-drawer__content .pf-c-login .ak-login-container
+  .pf-c-login__header {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
