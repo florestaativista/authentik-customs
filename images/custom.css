@@ -8,8 +8,24 @@
     color: #000000;
   }
 
+  .pf-c-page__drawer .pf-c-drawer__content .pf-c-login .ak-login-container 
+  .pf-c-login__main .pf-c-login__main-body .pf-c-form .pf-c-form__group 
+  .pf-c-form__label .pf-c-form__label-text {
+    color: #000000;
+  }
+
+  .pf-c-page__drawer .pf-c-drawer__content .pf-c-login .ak-login-container 
+  .pf-c-login__main .pf-c-login__main-body .pf-c-form .pf-c-form__group .pf-c-form-control {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
   .pf-c-page__drawer .pf-c-drawer__content .pf-c-login .ak-login-container .pf-c-login__main::before {
     background-image: url('../images/image-left.png');
+  }
+
+  .pf-c-page__drawer .pf-c-drawer__content .pf-c-login .ak-login-container .pf-c-login__main::after {
+    background-image: url('../images/image-right.png');
   }
 
   .pf-c-background-image {
@@ -88,7 +104,8 @@
     background-color: #FFF;
     font-family: "Degular Display";
     text-transform: uppercase;
-    color: #000;
+    color: #ffffff;
+    background-image: url('../images/background-button.png');
   }
   
   button.pf-c-button.pf-m-primary {
@@ -100,14 +117,18 @@
   
   @media (prefers-color-scheme: light) {
     .pf-c-page__drawer .pf-c-drawer__content .pf-c-login .ak-login-container .pf-c-login__main .pf-c-login__main-footer .pf-c-login__main-footer-band {
-      background-color: #2b2e33;
+      background-color: #efe1ec;
+    }
+    .pf-c-page__drawer .pf-c-drawer__content .pf-c-login .ak-login-container .pf-c-login__main .pf-c-login__main-footer 
+    .pf-c-login__main-footer-band .pf-c-login__main-footer-band-item {
+      color: #000000;
     }
   }
   
   
   @media (prefers-color-scheme: light) {
     .pf-c-login__main-footer-band {
-      background-color: #2b2e33;
+      background-color: #efe1ec;
     }
   }
   
