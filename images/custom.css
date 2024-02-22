@@ -7,6 +7,10 @@
     background-image: url('../images/image-left.png');
   }
 
+  .pf-c-background-image {
+    --pf-c-background-image--Filter: none;
+  }
+
   .pc-c-login__header {
     display: flex;
     justify-content: center;
