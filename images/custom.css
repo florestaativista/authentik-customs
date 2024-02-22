@@ -1,12 +1,22 @@
   .ak-login-container {
-    width: 23rem;
+    width: 40rem;
+    
   }
   
-  
-  .pf-c-page__drawer .pf-c-drawer__content .pf-c-login .ak-login-container
-  .pf-c-login__header .pf-c-brand {
+  .pf-c-login__main::before {
+    background-image: url('../images/image-left.png');
+  }
+
+  .pc-c-login__header {
+    display: flex;
+    justify-content: center;
     margin-bottom: 20px;
-    margin-top: 200px;
+  }
+
+  .pf-c-page__drawer .pf-c-drawer__content .pf-c-login .ak-login-container
+  .pf-c-login__header .pf-c-brand img {
+    width: auto;
+    height: 115px;
   }
   
   .pf-c-brand {
@@ -21,16 +31,16 @@
   
   @media (prefers-color-scheme: light) {
     .pf-c-page__drawer .pf-c-drawer__content .pf-c-login .ak-login-container .pf-c-login__main {
-      background-color: #18191a;
-      color: #fff;
+      background-color: #ffffff;
+      color: #000000;
     }
   }
   
   
   @media (prefers-color-scheme: light) {
     .pf-c-login__main {
-      background-color: #18191a;
-      color: #fff;
+      background-color: #ffffff;
+      color: #000000;
     }
   }
   
@@ -42,14 +52,14 @@
   .pf-c-login__main .pf-c-login__main-header h1.pf-c-title {
     font-family: "Degular Display";
     text-transform: uppercase;
-    color: #fff;
+    color: #000000;
   }
   
   
   h1.pf-c-title {
     font-family: "Degular Display";
     text-transform: uppercase;
-    color: #fff;
+    color: #000000;
   }
   
   .pf-c-login__main-body {
