@@ -1,14 +1,33 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Degular Display';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/static/dist/assets/floresta/Degular-Display-Black.otf') format('ttf'),
+       url('/static/dist/assets/floresta/Degular-Display-Black.otf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/static/dist/assets/floresta/SpaceGrotesk-Regular.ttf') format('ttf'),
+       url('/static/dist/assets/floresta/SpaceGrotesk-Regular.ttf') format('truetype');
+}
+
   .ak-login-container {
-    width: 40rem;
+    max-width: 32rem;
+    width: 100%;
     position: relative;
   }
 
   .ak-login-container::before {
     content: "";
     position: absolute;
-    top: 8px;
-    left: 547px;
-    width: 47%;
+    top: 158px;
+    left: 414px;
+    width: 56%;
     height: 100%;
     background-image: url('/static/dist/assets/floresta/image-right.png');
     background-size: contain;
@@ -20,9 +39,9 @@
   .ak-login-container::after {
     content: "";
     position: absolute;
-    top: -46px;
-    left: -152px;
-    width: 36%;
+    top: 76px;
+    left: -159px;
+    width: 47%;
     height: 100%;
     background-image: url('/static/dist/assets/floresta/image-left.png');
     background-size: contain;
@@ -33,13 +52,36 @@
 
   @media (min-width: 1200px) {
     .ak-login-container::before {
-      top: 172px;
-      left: 547px;
+      
+      top: 151px;
+      left: 414px;
     }
 
     .ak-login-container::after {
-      top: 118px;
-      left: -152px;
+      
+      top: 67px;
+      left: -159px;
+    }
+    .pf-c-login__header {
+      margin-top: 0;
+    }
+    
+    .pf-c-login {
+      --pf-c-login__header--c-brand--MarginBottom: 0;
+    }
+  }
+
+  @media (min-width: 470px) and (max-width: 947px) {
+    .ak-login-container::before {
+      display: none;
+    }
+
+    .ak-login-container::after {
+      display: none;
+    }
+
+    .ak-login-container {
+      padding: 0 20px; 
     }
   }
   
@@ -56,13 +98,27 @@
     color: #000000;
   }
 
-  /* .pf-c-form-control::before {
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(125,226,85,1) 0%, rgba(89,133,226,1) 30%, rgba(155,45,233,1) 58%, rgba(228,120,211,1) 100%, rgba(0,212,255,1) 100%);
-  } */
-
   .pf-c-form-control {
     background-color: #ffffff;
     color: #000000;
+    position: relative;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to right, rgb(25, 240, 53), rgb(79, 204, 241), rgb(241, 73, 219)) 1;
+    border-radius: 4px;
+  }
+
+  .pf-c-form-control:focus-visible {
+    outline: #4dfa50;
+  }
+  
+  .pf-c-form-control.ak-stage-prompt {
+    background-color: #ffffff;
+    color: #000000;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to right, rgb(25, 240, 53), rgb(79, 204, 241), rgb(241, 73, 219)) 1;
+    border-radius: 4px;
   }
 
   .form-control-static {
@@ -77,17 +133,17 @@
   .pf-c-login__header {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
 
   .pf-c-page__drawer .pf-c-drawer__content .pf-c-login .ak-login-container
   .pf-c-login__header .pf-c-brand img {
-    width: auto;
-    height: 115px;
+    max-width: 240.55px;
+    width: 100%;
+    height: 90px;
   }
   
   .pf-c-brand {
-    
     margin-bottom: 20px;
     margin-top: 100px;
   }
@@ -104,7 +160,6 @@
     }
   }
   
-  
   @media (prefers-color-scheme: light) {
     .pf-c-login__main {
       background-color: #ffffff;
@@ -119,16 +174,8 @@
     padding-top: 30px;
   }
   
-  .pf-c-page__drawer .pf-c-drawer__content .pf-c-login .ak-login-container
-  .pf-c-login__main .pf-c-login__main-header h1.pf-c-title {
-    font-family: "Degular Display";
-    text-transform: uppercase;
-    color: #000000;
-  }
-  
-  
   h1.pf-c-title {
-    font-family: "Degular Display";
+    --pf-c-title--FontFamily: "Degular Display";
     text-transform: uppercase;
     color: #000000;
   }
@@ -159,7 +206,7 @@
     color: #ffffff;
     font-size: larger;
     font-weight: bold;
-    background-image:url('/static/dist/assets/floresta/background-button.png');
+    background: linear-gradient(90deg, rgba(81,46,218,1) 0%, rgba(244,53,205,1) 100%);
   }
   
   @media (prefers-color-scheme: light) {
@@ -171,7 +218,6 @@
       color: #ffffff;
     }
   }
-  
   
   @media (prefers-color-scheme: light) {
     .pf-c-login__main-footer-band {
@@ -203,3 +249,31 @@
     display: none;
   }
   
+  .pf-c-login__header.ak-flow-executor .pf-c-brand.ak-flow-executor {
+    margin-bottom: 0;
+    margin-top: 50px;
+  }
+
+  .ak-login-container.style-scope.ak-flow-executor::before {
+    display: none;
+  }
+
+  .ak-login-container.style-scope.ak-flow-executor::after {
+    display: none;
+  }
+
+  .ak-login-container.style-scope.ak-flow-executor {
+    margin-top: 0;
+  }
+
+  .pf-c-login__main-footer-links.ak-stage-prompt {
+    padding: 10px;
+  }
+
+  .pf-c-login__main.style-scope.ak-flow-executor {
+    margin-bottom: 50px;
+  }
+
+  .pf-c-background-image.ak-flow-executor {
+    --pf-c-background-image--Filter: none;
+  }
